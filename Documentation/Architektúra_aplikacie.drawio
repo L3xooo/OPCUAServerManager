@@ -1,0 +1,127 @@
+<mxfile host="app.diagrams.net" modified="2024-03-29T20:00:03.860Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="DjH-Jj_PI7Bh1Dskhfoh" version="24.2.1" type="device">
+  <diagram name="Page-1" id="ZW5r4lV16KyjBGtsDmCN">
+    <mxGraphModel dx="1434" dy="784" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="640" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-1" value="MySQL" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="320" y="680" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-4" value="Docker kontajner" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="300" y="650" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-5" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="274" y="60" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-6" value="MongoDB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="314" y="100" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-7" value="Docker kontajner" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="294" y="70" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-8" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="240" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-10" value="Docker kontajner" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="250" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-11" value="AAS Registry" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="155" y="300" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-12" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="414" y="240" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-13" value="Docker kontajner" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="434" y="250" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-14" value="AAS Server" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="429" y="300" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-21" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="430" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-22" value="Docker kontajner" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="300" y="440" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-23" value="Web aplikácia" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="295" y="490" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-24" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;" edge="1" parent="1" source="kS5olZFP-7E2zmp5ECGg-8" target="kS5olZFP-7E2zmp5ECGg-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="430" as="sourcePoint" />
+            <mxPoint x="440" y="380" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="210" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-25" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="kS5olZFP-7E2zmp5ECGg-12" target="kS5olZFP-7E2zmp5ECGg-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="230" as="sourcePoint" />
+            <mxPoint x="600" y="180" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="484" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-26" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="kS5olZFP-7E2zmp5ECGg-21" target="kS5olZFP-7E2zmp5ECGg-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="430" as="sourcePoint" />
+            <mxPoint x="370" y="380" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="350" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-27" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="kS5olZFP-7E2zmp5ECGg-21" target="kS5olZFP-7E2zmp5ECGg-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="430" as="sourcePoint" />
+            <mxPoint x="280" y="320" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="350" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-28" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="510" as="sourcePoint" />
+            <mxPoint x="560" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-29" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="430" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-31" value="OPC UA server" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="605" y="470" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-32" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="kS5olZFP-7E2zmp5ECGg-21" target="kS5olZFP-7E2zmp5ECGg-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="640" as="sourcePoint" />
+            <mxPoint x="460" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-33" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="430" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-34" value="Docker kontajner" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="440" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-35" value="PhpMyAdmin" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="65" y="490" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-36" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="600" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-37" value="Docker kontajner" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="610" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kS5olZFP-7E2zmp5ECGg-38" value="MongoClient" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="65" y="660" width="110" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,83 @@
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+code {
+  color: #E01A76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+
+/* APP CUSTOM */
+.w-custom-50{
+  overflow: hidden;
+  text-wrap: nowrap;
+}
+.h-custom-btn{
+  height: 24px
+}
+.vh-75{
+  height: 75vh;
+}
+.w-custom-100{
+  width: 100px;
+}
+.list-group-item:hover{
+  background-color: rgb(243, 243, 243);
+  cursor: pointer;
+}
+.btn:focus, .btn:active:focus {
+  box-shadow: none;
+}
+.list-group-item:hover .delete-btn{
+  visibility: visible;
+}
+.delete-btn{
+  visibility: hidden;
+}
+:root {
+  --test : #c2babac0;
+  --dark: #212529;
+  --light: #F8F9FA;
+  --primary-color: #635985;
+  --secondary-color: #443C68;
+  --tertiary-color: #393053;
+  --quaternary-color: #18122B;
+}
+
+.custom-scroll{
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.no-border{
+  border: 0;
+}
+.bg-test{
+  background-color: var(--test);
+}
+.bg-primary-custom {
+  background-color: var(--primary-color);
+}
+.bg-secondary-custom {
+  background-color: var(--secondary-color);
+}
+.bg-tertiary-custom {
+  background-color: var(--tertiary-color);
+}
+.bg-quaternary-custom {
+  background-color: var(--quaternary-color);
+}

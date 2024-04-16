@@ -1,0 +1,104 @@
+version: "3.4"
+services:
+    opcua-manager-service:
+        container_name: opcua-manager-service
+        build:
+            context: ../Server
+            dockerfile: Dockerfile
+        ports:
+            - 8000:8080
+        volumes:
+            - ./Servers/:/app/Servers #test
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Docker
+            - ASPNETCORE_AAS_SERVER_SERVICE_URL=http://aas-server:4001
+            - DOTNET_CONFIGURE_XML_CASING=false
+            - DETAIL_SCRIPT_NAME=getServerDetails.sh
+
+        depends_on:
+            mysql:
+                condition: service_healthy
+
+    opcua-manager-ui:
+        container_name: opcua-manager-ui
+        build:
+            context: ../Client
+            dockerfile: Dockerfile
+        ports:
+            - 5173:5173
+        environment:
+            - VITE_BACKEND_URL=http://localhost:8000/api/opcuaserver/
+            - VITE_AAS_SERVER_SERVICE=http://localhost:4001/aasServer/
+            - VITE_AAS_REGISTRY_SERVICE=http://localhost:4000/registry/api/v1/registry/
+            - VITE_SUBMODELS_ENDPOINT=/submodels/
+            - VITE_SUBMODELS_BY_ID_ENDPOINT=/submodel/values/
+        depends_on:
+            opcua-manager-service:
+                condition: service_started
+
+    registry:
+        container_name: aas-registry
+        image: eclipsebasyx/aas-registry:1.5.1
+        ports:
+            - 4000:4000
+        volumes:
+            - ./Config/AASRegistry:/usr/share/config
+        healthcheck:
+            test: wget --no-verbose --tries=1 --spider registry:4000/health || exit 1
+            interval: 5s
+            retries: 20
+            start_period: 1s
+            timeout: 10s
+        depends_on:
+            mongodb:
+                condition: service_healthy
+            mysql:
+                condition: service_healthy
+
+    aas:
+        container_name: aas-server
+        image: eclipsebasyx/aas-server:1.5.1
+        ports:
+            - 4001:4001
+        volumes:
+            - ./Config/AASServer:/usr/share/config
+        healthcheck:
+            test: wget --no-verbose --tries=1 --spider aas:4001/health || exit 1
+            interval: 5s
+            retries: 20
+            start_period: 1s
+            timeout: 10s
+        depends_on:
+            registry:
+                condition: service_healthy
+
+    mysql:
+        image: mysql:8.0
+        container_name: mysql
+        environment:
+            MYSQL_DATABASE: "opcua_servers"
+            MYSQL_USER: "user"
+            MYSQL_PASSWORD: "password"
+            MYSQL_ROOT_PASSWORD: "password"
+        volumes:
+            - ./Database/MySQL:/var/lib/mysql
+        ports:
+            - 3306:3306
+        healthcheck:
+            test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+            interval: 3s
+            timeout: 4s
+            retries: 20
+
+    mongodb:
+        image: mongo:7.0
+        container_name: mongodb
+        ports:
+            - 27017:27017
+        volumes:
+            - ./Database/MongoDB:/data/db
+        healthcheck:
+            test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+            interval: 3s
+            timeout: 4s
+            retries: 20
