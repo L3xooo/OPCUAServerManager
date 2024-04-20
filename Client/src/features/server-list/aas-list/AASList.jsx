@@ -51,11 +51,15 @@ const AASList = (props) => {
     }
     const formData = new FormData();
     formData.append("someKey" , file);
+    startLoading();
     const response = await addServer(formData);
     if (response.ok) {
       dispatch(showAlert({showAlert: true, message: AAS_ALERT_MESSAGES.SUCCESS_IMPORT, type: "success", icon: CheckCircleFill }));
       fetchData();  
+      stopLoading();
     } else {
+      fetchData();
+      stopLoading();
       dispatch(showAlert({showAlert: true, message: AAS_ALERT_MESSAGES.ERROR_IMPORT, type: "danger", icon: XCircleFill }));
     }
   };
@@ -63,7 +67,7 @@ const AASList = (props) => {
   return (
     <>
       <div className="d-flex align-center justify-content-between">
-        <Form.Group controlId="formFile" className="px-1" onChange={handleFileChange}>
+        <Form.Group controlId="formFile" onChange={handleFileChange}>
           <Form.Control type="file" />
         </Form.Group>
         <CustomButton size={1} buttonIcon={PlusCircleFill}  handleButtonClick={(event) => handleAddServer(event, selectedFile)}/>
@@ -79,7 +83,7 @@ const AASList = (props) => {
         ) : (
           <ListGroup className="pt-2">
             {filteredServers.map((server) => (
-              <AASItem key={server.idShort} server={server} fetchData={fetchData}/>
+              <AASItem key={server.idShort} server={server} fetchData={fetchData} startLoading={startLoading} stopLoading={stopLoading}/>
             ))}
           </ListGroup>
         )

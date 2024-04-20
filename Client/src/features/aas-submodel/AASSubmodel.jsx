@@ -88,7 +88,7 @@ const AASSubmodel = () => {
 
   return (
     <Card className="text-center border-0 shadow">
-      <ComponentHeader header={"AAS Server Submodels"} />
+      <ComponentHeader header={"AAS Submodels"} />
       <Card.Body className="vh-75 custom-scroll bg-white pb-2">
         {selectedServer === null ? null : (
           <ComponentBody

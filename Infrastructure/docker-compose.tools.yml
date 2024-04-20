@@ -1,20 +1,18 @@
-version: '3.4'
 services:
+    mongo_client:
+        image: mongoclient/mongoclient:4.0.1
+        container_name: mongodb_client
+        restart: always
+        depends_on:
+            - mongodb
+        ports:
+            - 5016:3000
 
-  mongo_client:
-    image: mongoclient/mongoclient:4.0.1
-    container_name: mongodb_client
-    restart: always
-    depends_on:
-      - mongodb
-    ports:
-      - 5016:3000
-
-  phpmyadmin:
-    image: phpmyadmin:5.2.0
-    container_name: phpmyadmin   
-    restart: always
-    ports:
-      - 5013:80
-    environment:
-      - PMA_ARBITRARY=1
+    phpmyadmin:
+        image: phpmyadmin:5.2.0
+        container_name: phpmyadmin
+        restart: always
+        ports:
+            - 5013:80
+        environment:
+            - PMA_ARBITRARY=1

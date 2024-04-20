@@ -4,7 +4,7 @@ import React from "react";
 
 const CustomButtonGroup = (props) => {
   return (
-    <ButtonGroup className={`p-${props.size} w-100`} aria-label="Basic example">
+    <ButtonGroup className={`py-${props.size} w-100`} aria-label="Basic example">
       {props.buttons.map((button, index) => {
         return (
           <Button key={index} type="button" variant="dark"

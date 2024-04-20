@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import CustomButton from "../../../components/custom-button";
 import { TrashFill, CheckCircleFill, XCircleFill } from "react-bootstrap-icons";
 import { showAlert } from "../../alert/AlertSlice";
-import { ALERT_MESSAGES } from "../../alert/AlertMessages";
+import { AAS_ALERT_MESSAGES } from "../../alert/AlertMessages";
 import { deleteServer } from "./AASListAPI";
 import { removeUrlEndpoint } from "../../../utils/stringUtils";
 
@@ -20,18 +20,20 @@ const AASItem = (props) => {
   };
 
   const deleteServerFromDb = async (event, url) => {
+    props.startLoading();
     const response = await deleteServer(event, url);
     if (selectedServer) {
       if (selectedServer.idShort === props.server.idShort)
         dispatch(selectServer({selectedServer : {}}));
     } 
     if (response) {
-      dispatch(showAlert({showAlert: true, message: AAS_ALERT_MESSAGES.SUCCESS_IMPORT, type: "success", icon: CheckCircleFill }));
+      dispatch(showAlert({showAlert: true, message: AAS_ALERT_MESSAGES.SUCCESS_DELETE, type: "success", icon: CheckCircleFill }));
       props.fetchData();
     } else {
-      dispatch(showAlert({showAlert: true, message: AAS_ALERT_MESSAGES.ERROR_IMPORT, type: "danger", icon: XCircleFill }));
+      dispatch(showAlert({showAlert: true, message: AAS_ALERT_MESSAGES.ERROR_DELETE, type: "danger", icon: XCircleFill }));
       console.error("Error");
     }
+    props.stopLoading();
   };
 
   return (

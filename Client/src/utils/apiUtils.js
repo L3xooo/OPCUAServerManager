@@ -5,7 +5,12 @@ const fetchData = async (url, method) => {
   try {
     const response = await fetch(url, parameters);
     console.log(response);
-    if (response.headers.get("Content-length") === 0)
+    response.headers.forEach((value, name) => {
+      console.log(`${name}: ${value}`);
+    });
+    console.log(response.headers.get("content-length"));
+    console.log(typeof(response.headers.get("content-length")));
+    if (response.headers.get("content-length") === "0")
       return response;
     return response.json();
   } catch (error) {

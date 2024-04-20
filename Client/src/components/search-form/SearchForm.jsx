@@ -4,9 +4,9 @@ import React from "react";
 
 const SearchForm = (props) => {
   return (
-    <InputGroup className="px-1 d-flex">
-      <InputGroup.Text id="basic-addon1">
-        <SearchIcon/>
+    <InputGroup className="justify-center d-flex">
+      <InputGroup.Text id="basic-addon1" className="bg-dark">
+        <SearchIcon fill="white"/>
       </InputGroup.Text>
       <Form.Control
         placeholder="Search"

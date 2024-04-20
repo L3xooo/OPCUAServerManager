@@ -8,7 +8,7 @@ import SearchForm from "../../components/search-form/SearchForm";
 import ComponentHeader from "../../components/component-header/ComponentHeader";
 
 const ServerList = () => {
-  const [activeList, setActiveList] = useState("AAS Servers");
+  const [activeList, setActiveList] = useState("AAS List");
   const [searchItem, setSearchItem] = useState("");
 
   const handleButtonClick = (value) => {
@@ -31,19 +31,19 @@ const ServerList = () => {
           className="border-0"
         >
           <CustomButtonGroup
-            buttons={["AAS Servers", "OPCUA Servers"]}
+            buttons={["AAS List", "OPCUA Servers"]}
             handleButtonClick={handleButtonClick}
             activeFilter={activeList}
             size={2}
           />
-          <div className="d-flex align-items-center pb-2">
+          <div className="pb-2 w-100">
             <SearchForm
               searchItem={searchItem}
               handleInputChange={handleInputChange}
             />
           </div>
         </Nav>
-        {activeList == "AAS Servers" ? (
+        {activeList == "AAS List" ? (
           <AASList searchItem={searchItem} />
         ) : (
           <OPCUAList searchItem={searchItem} />

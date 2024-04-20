@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OPCUAServerManager.Helpers
 {
-	public static class FileDownloader
+	public static class DownloadHelper
 	{
 		public static async Task<string?> DownloadFile(string url, string destinationFilePath = "Servers")
 		{

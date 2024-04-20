@@ -25,7 +25,7 @@ const AASServer = () => {
 
   return (
     <Card className="text-center border-0 shadow">
-      <ComponentHeader header={"AAS Server Detail"}/>
+      <ComponentHeader header={"AAS Detail"}/>
       <Card.Body className="vh-75 custom-scroll bg-white pb-2">
         {data === null ? (
           null

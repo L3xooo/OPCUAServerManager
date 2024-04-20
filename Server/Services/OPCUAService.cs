@@ -41,7 +41,7 @@ namespace OPCUAServerManager.Services
 				throw new InvalidOperationException("Bad request: Item with the same identifier already exists or URL is empty or null");
 			}
 
-			string? downloadResult = await FileDownloader.DownloadFile(uri);
+			string? downloadResult = await DownloadHelper.DownloadFile(uri);
 			if (downloadResult == null)
 			{
 				_logger.LogError($"Failed to download file for {data.Name}");

@@ -2,12 +2,12 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS dotnet-build
 WORKDIR /src
 COPY ./ /src
-RUN dotnet restore "ReactApp1.Server.csproj" 
-RUN dotnet build "ReactApp1.Server.csproj" -c Release -o /app/build
+RUN dotnet restore "OPCUAServerManager.csproj" 
+RUN dotnet build "OPCUAServerManager.csproj" -c Release -o /app/build
 
 # Stage 2: Publish Stage
 FROM dotnet-build AS dotnet-publish
-RUN dotnet publish "ReactApp1.Server.csproj" -c Release -o /app/publish
+RUN dotnet publish "OPCUAServerManager.csproj" -c Release -o /app/publish
 
 # Stage 3: Run Stage
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
@@ -26,4 +26,4 @@ WORKDIR /app
 COPY --from=dotnet-publish /app/publish .
 COPY --from=dotnet-build /src/Scripts ./Scripts
 
-ENTRYPOINT [ "dotnet" , "ReactApp1.Server.dll" ]
+ENTRYPOINT [ "dotnet" , "OPCUAServerManager.dll" ]

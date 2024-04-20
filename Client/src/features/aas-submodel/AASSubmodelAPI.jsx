@@ -9,6 +9,7 @@ const ADD_SERVER_ENDPOINT = import.meta.env.VITE_BACKEND_URL;
 
 export const getSubmodels = async (serverEndpoint) => {
   const response = await fetchData(serverEndpoint + SUBMODELS_ENDPOINT, "GET");
+  console.log(response);
   return response;
 };
 
