@@ -6,8 +6,8 @@ import InputGroupData from "../../../../components/input-group-data";
 
 const OPCUAServerBody = (props) => {
 
-  console.log(props.data);
-  console.log(props.loading);
+  //console.log(props.data);
+  //console.log(props.loading);
   return (
     <Modal.Body>
       {props.loading ? (

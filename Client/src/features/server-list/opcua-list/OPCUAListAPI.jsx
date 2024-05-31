@@ -12,14 +12,14 @@ export const getServers = async () => {
 export const deleteServer = async (event, id) => {
   event.stopPropagation();
   const response = await fetchData(URL + id, "DELETE");
-  console.log(response);
+  //console.log(response);
   return response; 
 };
 
 export const runServer = async (event, id) => {
   event.stopPropagation();
   const response = await fetchData(URL + id + RUN_ENDPOINT, "PUT");
-  console.log(response);
+  //console.log(response);
   return response;
 };
 

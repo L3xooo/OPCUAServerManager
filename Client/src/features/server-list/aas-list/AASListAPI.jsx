@@ -5,7 +5,6 @@ const URL = import.meta.env.VITE_AAS_REGISTRY_SERVICE;
 const ADD_URL = import.meta.env.VITE_AAS_SERVER_SERVICE + "/shells/aasx";
 
 export const getServers = async () => {
-  console.log(URL);
   const response = await fetchData(URL, "GET");
   return response;
 };

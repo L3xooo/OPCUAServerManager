@@ -26,11 +26,14 @@ This project is a web application designed for managing OPC UA servers, providin
 
 Before running the application locally make sure you have installed all requirements from the section before.
 
+1. ``` git clone  <repository_url>```
+
 ### Executing program
 
 To start up the application run the docker compose command to run the docker containers which are neccesary for the application, after the successfull start of all container access the ```localhost:5173``` for the UI
 
 ```bash
+cd Infrastructure
 docker compose up -d
 ```
 

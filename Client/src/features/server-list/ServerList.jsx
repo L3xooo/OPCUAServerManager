@@ -17,7 +17,7 @@ const ServerList = () => {
 
   const handleInputChange = (e) => {
     const userInput = e.target.value;
-    console.log(userInput);
+    //console.log(userInput);
     setSearchItem(userInput);
   };
 

@@ -40,12 +40,18 @@ const AASSubmodel = () => {
     const parsedData = {};
     const response = await getSubmodels(serverEndpoint);
     await Promise.all(
-      response.map(async (item) => {
+      response.map(async (item) => {    
+        //console.log(item.semanticId.keys[0].value); //toto je value semanticid
+        
         const keyValue = await getSubmodelById(
           serverEndpoint,
           item.idShort
         );
-        parsedData[item.idShort] = keyValue;
+
+        //console.log(item.idShort);
+        //console.log(keyValue);
+        parsedData[item.idShort] = keyValue; //pridat semantic id???? a potom spravit porovnania
+        //parsedData[item.idShort].semanticId = item.semanticId.keys[0].value;
       })
     );
     setData(parsedData);

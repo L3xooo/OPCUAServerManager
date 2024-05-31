@@ -3,7 +3,7 @@ import { Col, Card, Row, Collapse } from "react-bootstrap";
 import Loading from "../../../../components/loading";
 
 const ScriptConsole = (props) => {
-  console.log(props);
+  //console.log(props);
   return (
     <Collapse in={props.showConsole}>
       <Card bg="dark" className="text-light">

@@ -1,5 +1,4 @@
 services:
-
     opcua-manager-service:
         container_name: opcua-manager-service
         build:
@@ -27,7 +26,7 @@ services:
         ports:
             - 5173:5173
         environment:
-            - VITE_BACKEND_URL=http://localhost:8000/api/opcuaserver/
+            - VITE_BACKEND_URL=http://localhost:8000/api/opcuaserver/ #didint work with the containers name
             - VITE_AAS_SERVER_SERVICE=http://localhost:4001/aasServer/
             - VITE_AAS_REGISTRY_SERVICE=http://localhost:4000/registry/api/v1/registry/
             - VITE_SUBMODELS_ENDPOINT=/submodels/

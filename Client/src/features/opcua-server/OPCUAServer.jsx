@@ -40,7 +40,7 @@ const OPCUAServerDetail = (props) => {
       if (backendFunction != deleteServer) {
         dispatch(showOPCUAServer({showServerModal: true, server: response}));
       } else {
-        console.log("here");
+        //console.log("here");
         dispatch(hideOPCUAServer());
       }
       startLoading();

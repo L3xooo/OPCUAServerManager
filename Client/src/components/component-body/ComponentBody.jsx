@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Loading from "../loading";
 import InputGroupData from "../input-group-data";
 import { Card, Collapse, Button } from "react-bootstrap";
 import ComponentHeaderInner from "../component-header-inner";
 
 const ComponentBody = (props) => {  
+
   const renderComponentData = (data, parentKey = "") => {
     return Object.entries(data).map(([key, value]) => {
       const id = parentKey + "." + key;
